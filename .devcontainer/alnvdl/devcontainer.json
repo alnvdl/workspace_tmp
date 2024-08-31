@@ -1,0 +1,75 @@
+{
+  "build": {
+    "dockerfile": "../Dockerfile"
+  },
+  "containerUser": "alnvdl",
+  "postStartCommand": "/workspaces/workspace/start.sh",
+  "onCreateCommand": "CONFIG=alnvdl /workspaces/workspace/create.sh",
+  "containerEnv": {
+    "SHELL": "/bin/bash",
+    "DEBIAN_FRONTEND": "noninteractive",
+    "LANG": "en_US.UTF-8",
+    "LC_CTYPE": "pt_BR.UTF-8",
+    "LC_NUMERIC": "pt_BR.UTF-8",
+    "LC_TIME": "pt_BR.UTF-8",
+    "LC_COLLATE": "en_US.UTF-8",
+    "LC_MONETARY": "pt_BR.UTF-8",
+    "LC_MESSAGES": "en_US.UTF-8",
+    "LC_PAPER": "pt_BR.UTF-8",
+    "LC_NAME": "pt_BR.UTF-8",
+    "LC_ADDRESS": "pt_BR.UTF-8",
+    "LC_TELEPHONE": "pt_BR.UTF-8",
+    "LC_MEASUREMENT": "pt_BR.UTF-8",
+    "LC_IDENTIFICATION": "pt_BR.UTF-8",
+    "PATH": "${localEnv:PATH}:/home/alnvdl/dev/go/bin:/home/alnvdl/dev/node/bin"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "golang.go",
+        "ms-python.flake8",
+        "ms-python.mypy-type-checker",
+        "ms-python.black-formatter",
+        "dbaeumer.vscode-eslint"
+      ]
+    },
+    "codespaces": {
+      "repositories": {
+        "alnvdl/reader": {
+          "permissions": "write-all"
+        },
+        "alnvdl/terr": {
+          "permissions": "write-all"
+        },
+        "alnvdl/fstringen": {
+          "permissions": "write-all"
+        },
+        "alnvdl/request": {
+          "permissions": "write-all"
+        },
+        "alnvdl/alnvdl.github.io": {
+          "permissions": "write-all"
+        },
+        "alnvdl/squarewars": {
+          "permissions": "write-all"
+        },
+        "alnvdl/squareplanner": {
+          "permissions": "write-all"
+        },
+        "alnvdl/wcf": {
+          "permissions": "write-all"
+        },
+        "alnvdl/oks": {
+          "permissions": "write-all"
+        },
+        "alnvdl/angst": {
+          "permissions": "write-all"
+        },
+        "alnvdl/web-tree": {
+          "permissions": "write-all"
+        }
+      }
+    }
+  }
+}

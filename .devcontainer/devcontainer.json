@@ -1,0 +1,38 @@
+{
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "containerUser": "alnvdl",
+  "postStartCommand": "/workspaces/workspace/start.sh",
+  "onCreateCommand": "/workspaces/workspace/create.sh",
+  "containerEnv": {
+    "SHELL": "/bin/bash",
+    "DEBIAN_FRONTEND": "noninteractive",
+    "LANG": "en_US.UTF-8",
+    "LC_CTYPE": "pt_BR.UTF-8",
+    "LC_NUMERIC": "pt_BR.UTF-8",
+    "LC_TIME": "pt_BR.UTF-8",
+    "LC_COLLATE": "en_US.UTF-8",
+    "LC_MONETARY": "pt_BR.UTF-8",
+    "LC_MESSAGES": "en_US.UTF-8",
+    "LC_PAPER": "pt_BR.UTF-8",
+    "LC_NAME": "pt_BR.UTF-8",
+    "LC_ADDRESS": "pt_BR.UTF-8",
+    "LC_TELEPHONE": "pt_BR.UTF-8",
+    "LC_MEASUREMENT": "pt_BR.UTF-8",
+    "LC_IDENTIFICATION": "pt_BR.UTF-8",
+    "PATH": "${localEnv:PATH}:/home/alnvdl/dev/go/bin:/home/alnvdl/dev/node/bin"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "golang.go",
+        "ms-python.flake8",
+        "ms-python.mypy-type-checker",
+        "ms-python.black-formatter",
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  }
+}
