@@ -3,8 +3,8 @@
     "dockerfile": "Dockerfile"
   },
   "containerUser": "alnvdl",
-  "postStartCommand": "/workspaces/workspace/start.sh",
-  "onCreateCommand": "/workspaces/workspace/create.sh",
+  "postStartCommand": "./start.sh",
+  "onCreateCommand": "./create.sh",
   "containerEnv": {
     "SHELL": "/bin/bash",
     "DEBIAN_FRONTEND": "noninteractive",
